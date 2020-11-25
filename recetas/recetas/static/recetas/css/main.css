@@ -1,7 +1,14 @@
 html {
     overflow-y: scroll;
     height: 401%;
+    background-color: blue;
 }
+
+header .navbar-nav {
+    
+    align-items: center;    
+}
+
 footer {
     position: absolute;
     bottom: 0;
@@ -16,3 +23,9 @@ footer a, footer a:hover {
     text-decoration: none;
 
 }
+
+.main-container {
+    padding-top: 50px;
+    border: 2px dashed black;
+}
+
