@@ -1,7 +1,15 @@
 html {
     overflow-y: scroll;
     height: 401%;
-    background-color: blue;
+    
+}
+
+.logo-text {
+    font-size: 30px;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    
 }
 
 header .navbar-nav {
@@ -26,6 +34,16 @@ footer a, footer a:hover {
 
 .main-container {
     padding-top: 50px;
-    border: 2px dashed black;
+    
 }
 
+@media (max-width: 576px) { 
+    .navbar-collapse{
+        margin-top: 20px;
+    }
+    .navbar-collapse .nav-item {
+        padding: 10px;
+        border-top: 1px solid #cccccc;
+        width: 100%;
+    }
+}
