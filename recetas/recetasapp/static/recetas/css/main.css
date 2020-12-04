@@ -1,6 +1,7 @@
 html {
+    
     overflow-y: scroll;
-    height: 401%;
+    height: 1000%;
     
 }
 
@@ -18,7 +19,7 @@ header .navbar-nav {
 }
 
 footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
     background-color: #444444;
@@ -34,6 +35,8 @@ footer a, footer a:hover {
 
 .main-container {
     padding-top: 50px;
+    position: relative;
+    height: 1000px;
     
 }
 

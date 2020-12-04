@@ -21,10 +21,10 @@ from recetasapp.views import user_views
 
 urlpatterns = [
     path('home/', home_views.home, name='home'),
-    path(r'^admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
     
-    path(r'^contacto/', home_views.contacto, name='contacto'),
-    path(r'^registro/', user_views.registro, name='registro'),
+    path('contacto/', home_views.contacto, name='contacto'),
+    path('registro/', user_views.registro, name='registro'),
 
     
 ]
