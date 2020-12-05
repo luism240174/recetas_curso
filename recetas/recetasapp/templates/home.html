@@ -9,6 +9,7 @@
 
 <h1>Recetas</h1>
 
+<!--
 <div class="card-deck">
 
 {% for receta in recetas %}
@@ -34,17 +35,29 @@
   
 {% endfor %}
 </div>
+-->
 
-<!--
 
 <div class="row row-cols-1 row-cols-md-3">
     <div class="col mb-4">
+
+      {% for receta in recetas %}
+
       <div class="card">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="{{ receta.imagen.url }}" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <h5 class="card-title">{{ receta.nombre }}</h5>
+          <p class="card-text">
+            <ul>
+            {% for ingrediente in receta.ingredientes.all %}
+
+                <li>{{ ingrediente.nombre }}</li>
+
+            {% endfor %}
+            </ul>  
+          </p>
         </div>
+      {% endfor %}
       </div>
     </div>
     <div class="col mb-4">
@@ -76,6 +89,5 @@
     </div>
   </div>
 
-  -->
 
 {% endblock %}
