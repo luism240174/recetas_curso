@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
-{% block titulo %} Recetas | registro {% endblock %}
+{% block titulo %} Recetas | login {% endblock %}
 
 {% block content %}
 
 <div class='col-12 col-lg-6 offset-lg-3'>
 
-    <form action= "{% url 'registro' %}" method="POST">{% csrf_token %}
+    <form action= "{% url 'login' %}" method="POST">{% csrf_token %}
     
 
         

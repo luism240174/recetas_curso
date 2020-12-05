@@ -32,11 +32,26 @@
                     <a class="nav-link" href="#">&Uacute;ltimas recetas</a>
                 </li>
                 
-                <li class="nav-item">
+                
+                  {% if request.user.is_authenticated %}
+                    <li class="nav-item">
+                    Hola, {{ request.user.username }}
+                    </li>
+
+                    <li class="nav-item">
+                    <a class="nav-link" href="{% url 'logout' %}">Desconectar</a>
+                    </li>
+  
+
+                  {% else %}
+
+                  <li class="nav-item">
+
                   <a class="nav-link" href="{% url 'registro' %}"><button type="button" class="btn btn-outline-primary">Registro</button>
                   </a>
-                </li>
-                
+                  </li>
+                {% endif %}
+
               </ul>
             </div>
           </nav>
