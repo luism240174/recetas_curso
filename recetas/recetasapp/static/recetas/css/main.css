@@ -5,7 +5,7 @@ html {
     
 }
 
-.logo-text {
+.navbar-brand .logo-text {
     font-size: 30px;
     font-style: italic;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -16,7 +16,8 @@ html {
 
 header .navbar-nav {
     
-    align-items: center;    
+    align-items: center;
+    color: lightseagreen;    
 }
 
 
@@ -25,6 +26,12 @@ header .navbar-nav {
     padding-bottom: 20px;
 }
 
+
+.lista-ingredientes {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
 footer {
     position: relative;
     bottom: 0px;
