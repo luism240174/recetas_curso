@@ -17,18 +17,23 @@ from django.contrib import admin
 from django.urls import path
 from recetasapp.views import home_views
 from recetasapp.views import user_views
+from recetasapp.views import recetas_views
 from django.conf import settings
 from django.conf.urls.static import static
+from django.conf.urls import url
 
 
 urlpatterns = [
-    path('home/', home_views.home, name='home'),
+    #path('home/', home_views.home, name='home'),
+    url(r'^$', home_views.home, name='home'),
     path('admin/', admin.site.urls),
     
     path('contacto/', home_views.contacto, name='contacto'),
     path('registro/', user_views.registro, name='registro'),
     path('login/', user_views.login, name='login'),
     path('logout/', user_views.logout, name='logout'),
+
+    path('receta/<slug:slug>/', recetas_views.receta, name='receta'),
 
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,12 +1,14 @@
 html {
     
     overflow-y: scroll;
-    height: 800%;
-    
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 100px;
+        
 }
 
-.navbar-brand .logo-text {
-    font-size: 30px;
+.navbar-brand .logo-text a{
+    font-size: 50px;
     font-style: italic;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: lightseagreen;
@@ -31,9 +33,10 @@ header .navbar-nav {
     list-style: none;
     padding-left: 0;
     margin-bottom: 0;
+    /*overflow: scroll;*/
 }
 footer {
-    position: relative;
+    position: absolute;
     bottom: 0px;
     width: 100%;
     background: rgb(150, 139, 139); 

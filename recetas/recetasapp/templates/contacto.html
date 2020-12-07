@@ -7,6 +7,33 @@
 
 {% block content %}
 
-<h1>Recetas - Contacto</h1>
+
+<div class='col-12 col-lg-6 offset-lg-3'>
+
+        <form action= "{% url 'contacto' %}" method="POST">{% csrf_token %}
+    
+
+        
+        <h1>Contacto</h1>
+        <br>
+        <p class='text-danger'>{{ error }}</p>
+        <p class='text-success'>{{ mensaje }}</p>
+
+       
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name='email' required>
+        </div>
+        <div class="form-group">
+          <label for="password">Mensaje</label>
+          <textarea class="form-control" required name="mensaje"></textarea>
+    
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Enviar</button>    
+
+        </form>
+</div>
+
 
 {% endblock %}

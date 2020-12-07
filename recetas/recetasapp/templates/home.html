@@ -9,55 +9,32 @@
 
 <h1>Recetas</h1>
 
-
 <div class="row row-cols-1 row-cols-md-3">
-    <div class="col mb-4">
+    
+    {% for receta in recetas %}
 
-      {% for receta in recetas %}
+      <div class="col mb-4">
 
       <div class="card">
         <img src="{{ receta.imagen.url }}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{ receta.nombre }}</h5>
             <ul class="lista-ingredientes">
-            {% for ingrediente in receta.ingredientes.all %}
+              {% for ingrediente in receta.ingredientes.all %}
 
-                <li>{{ ingrediente.nombre }}</li>
+                <li>{{ ingrediente.nombre | truncatechars:55 }}</li>
 
-            {% endfor %}
+              {% endfor %}
             </ul>  
         </div>
-        <a><button class= "btn btn-primary btn-block">Ver más</button></a>
-      {% endfor %}
+
+        <a href="{% url 'receta' slug=receta.slug %}">
+          <button class= "btn btn-primary btn-block">Ver más</button>
+        </a>
+
       </div>
-    </div>
-    <div class="col mb-4">
-      <div class="card">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col mb-4">
-      <div class="card">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col mb-4">
-      <div class="card">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-      </div>
-    </div>
+      </div>  
+  {% endfor %}
   </div>
 
 

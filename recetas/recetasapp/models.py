@@ -32,6 +32,12 @@ class Ingrediente(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return "{}".format(self.nombre)
+
+    def __unicode__(self):
+        return "{}".format(self.nombre)
+
 
     
 class Pasos(models.Model):
@@ -42,6 +48,12 @@ class Pasos(models.Model):
 
     created_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return "Paso{}".format(self.numero)
+
+    def __unicode__(self):
+        return "Paso{}".format(self.numero)
 
 
 
